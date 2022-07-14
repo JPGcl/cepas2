@@ -1,0 +1,10 @@
+<div id="<%= dom_id friend %>">
+	<% if @modo_tabla == true %>
+		<td><%= friend.name %></td>
+		<td><%= friend.email %></td>
+	<% else %>
+		<td><strong>Nombre del amigo : </strong><%= friend.name %></td><br>
+		<td><strong>Correo de contacto : </strong><%= friend.email %></td><br><br>
+	<% end %>
+</div>
+

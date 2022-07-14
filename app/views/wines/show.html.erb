@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<h2>Ficha del vino</h2>
+  <div class="shadow-lg p-3 mb-5 bg-gray rounded">
+    <% @modo_tabla = false %>
+    <%= render @wine %>
+    <hr>
+    <%= link_to "Editar", edit_wine_path(@wine) %> |
+    <%= link_to "Volver", wines_path %>
+    <hr>
+    <%= button_to "Eliminar", @wine, method: :delete %>
+  </div>
+  

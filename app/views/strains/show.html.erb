@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<h2>Ficha de la Cepa</h2>
+  <div class="shadow-lg p-3 mb-5 bg-gray rounded">
+    <% @modo_tabla = false %>
+    <%= render @strain %>
+    <hr>
+    <%= link_to "Editar", edit_strain_path(@strain) %> |
+    <%= link_to "Volver", strains_path %>
+    <hr>
+    <%= button_to "Eliminar", @strain, method: :delete %>
+  </div>
+  

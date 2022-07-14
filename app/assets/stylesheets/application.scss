@@ -1,0 +1,25 @@
+@import "bootstrap";
+
+body, html {
+    height: 100%;
+    background-repeat: no-repeat;
+    background: url("https://media.istockphoto.com/photos/defocused-blurred-abstract-background-with-bokeh-picture-id899797962?k=20&m=899797962&s=612x612&w=0&h=ZfMNpzNuKmZLXLP5fvAvCqZbY3eHCpPtH32gblTe208=") no-repeat center center fixed;
+    background-size: 100% 100%;
+    color: aliceblue;
+}
+a:link {
+    text-decoration: none;
+  }
+  
+  a:visited {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: none ;
+    text-decoration-color: aqua;
+  }
+  
+  a:active {
+    text-decoration: underline;
+  }

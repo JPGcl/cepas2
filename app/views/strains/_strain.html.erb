@@ -1,0 +1,11 @@
+<div id="<%= dom_id strain %>">
+	<% if @modo_tabla == true %>
+		<td><%= strain.name %></td>
+		<td><%= strain.available %></td>
+	<% else %>
+		<td><strong>Nombre del vino : </strong><%= strain.name %></td><br>
+		<td><strong>Disponible? : </strong><%= strain.available %></td>
+   			 <!--% = form.check_box :approved % -->
+  
+	<% end %>
+</div>

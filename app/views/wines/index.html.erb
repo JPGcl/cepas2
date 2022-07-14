@@ -1,0 +1,43 @@
+<p style="color: green"><%= notice %></p>
+
+<div id="wines" class="shadow-lg p-3 mb-5 bg-gray rounded">
+  <h1>Catálogo de vinos</h1>
+  <table class="table table-hover table-dark">
+    <thead>
+      <tr>
+        <th>Nombre del vino</th>
+        <th>Año</th>
+        <th>Cepa</th>
+        <th>Aprobado?</th>
+        <th colspan="2">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @wines.each do |wine| %>
+        <tr>
+          <% @modo_tabla = true %>
+          <%= render wine %>
+          <!-- td>< % = wine.pet_count(wine.id) % ></ -->
+          <td><%= link_to "Ver", wine %></td>
+          <td><%= link_to "Editar", edit_wine_path(wine) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<div class="align-center-box">
+  <%= paginate @wines %>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <div class="align-start-box">
+    <%= link_to root_path, class: "page-item", style: "text-decoration: none; display: inline-block" do %>
+      <i class="fa fa-home  page-link  llink" aria-hidden="true" title="Ir al Home"></i>
+    <% end %>
+    <%= link_to new_wine_path, class: "page-item", style: "text-decoration: none; display: inline-block" do %>
+      <i class="fa fa-plus page-link llink" aria-hidden="true" title="Nuevo"></i>
+    <% end %>
+    <%= link_to wines_path, class: "page-item", style: "text-decoration: none; display: inline-block" do %>
+      <i class="fa fa-fast-backward pagination pagination-box page-link llink" aria-hidden="true" title="Volver"></i>
+    <% end %>
+  </div>
+</div>

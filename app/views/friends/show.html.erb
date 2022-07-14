@@ -1,0 +1,15 @@
+
+<p style="color: green"><%= notice %></p>
+
+<h2>Ficha del amigo</h2>
+  <div class="shadow-lg p-3 mb-5 bg-gray rounded">
+    <% @modo_tabla = false %>
+    <%= render @friend %>
+    <hr>
+    <%= link_to "Editar", edit_friend_path(@friend) %> |
+    <%= link_to "Volver", friends_path %> |
+    <%= button_to "Eliminar", @friend, method: :delete %>
+  </div>
+  
+<hr>
+

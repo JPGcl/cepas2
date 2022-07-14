@@ -1,0 +1,42 @@
+<p style="color: green"><%= notice %></p>
+
+<div id="friends" class="shadow-lg p-3 mb-5 bg-gray rounded">
+  <h1>Amigos</h1>
+  <table class="table table-hover table-dark">
+    <thead>
+      <tr>
+        <th>Nombre del amigo</th>
+        <th>Correo de contacto</th>
+        <th colspan="3">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @friends.each do |friend| %>
+        <tr>
+          <% @modo_tabla = true %>
+          <%= render friend %>
+          <!-- td>< % = friend.pet_count(friend.id) % ></ -->
+          <td><%= link_to "Ver", friend %></td>
+          <td><%= link_to "Editar", edit_friend_path(friend) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<div class="align-center-box">
+  <%= paginate @friends %>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <div class="align-start-box">
+    <%= link_to root_path, class: "page-item", style: "text-decoration: none; display: inline-block" do %>
+      <i class="fa fa-home  page-link  llink" aria-hidden="true" title="Ir al Home"></i>
+    <% end %>
+    <%= link_to new_friend_path, class: "page-item", style: "text-decoration: none; display: inline-block" do %>
+      <i class="fa fa-plus page-link llink" aria-hidden="true" title="Nuevo"></i>
+    <% end %>
+    <%= link_to friends_path, class: "page-item", style: "text-decoration: none; display: inline-block" do %>
+      <i class="fa fa-fast-backward pagination pagination-box page-link llink" aria-hidden="true" title="Volver"></i>
+    <% end %>
+  </div>
+</div>
+

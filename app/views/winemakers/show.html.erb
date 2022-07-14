@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @winemaker %>
+
+<div>
+  <%= link_to "Edit this winemaker", edit_winemaker_path(@winemaker) %> |
+  <%= link_to "Back to winemakers", winemakers_path %>
+
+  <%= button_to "Destroy this winemaker", @winemaker, method: :delete %>
+</div>

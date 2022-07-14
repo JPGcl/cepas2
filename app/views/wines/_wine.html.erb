@@ -1,0 +1,15 @@
+<div id="<%= dom_id wine %>">
+	<% if @modo_tabla == true %>
+		<td><%= wine.name %></td>
+		<td><%= wine.year %></td>
+		<td><%= wine.strain_id %></td>
+		<td><%= wine.approved %></td>
+	<% else %>
+		<td><strong>Nombre del vino : </strong><%= wine.name %></td><br>
+		<td><strong>Año : </strong><%= wine.year %></td><br>
+		<td><strong>Cepa : </strong><%= wine.strain_id %></td><br>
+		<td><strong>Aprobado? : </strong><%= wine.approved %></td>
+   			 <!--% = form.check_box :approved % -->
+
+	<% end %>
+</div>

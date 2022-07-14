@@ -56,8 +56,9 @@ gem "devise"
 gem "faker"
 gem "seedbank"
 gem "pg"
-#gem "yarn"
-#gem "optimist"
+gem "yard"
+gem "yarn"
+gem "optimist"
 
 # Use Sass to process CSS
 # gem "sassc-rails"
